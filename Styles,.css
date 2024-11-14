@@ -1,2 +1,23 @@
 body {
+  background-color: #888;
+  min-width: 80em;
+}
+
+nav {
+  margin: 2em 10em 0 0;
+}
+ul {
+  display: flex;
+  gap: 3em;
+  width: 100%;
+  justify-content: end;
+}
+li {
+  list-style: none;
+  font-size: 1.4em;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
