@@ -1,26 +1,39 @@
+
 body {
-  min-width: 55em;
   display: flex;
   flex-direction: column;
+  min-width: 55em;
   min-height: 100vh;
-  display: grid;
-  grid-template-rows: 100px 3fr 1fr 1fr;
+  overflow-x: hidden;
+  overflow-y: scroll; /* Habilita el scroll vertical */
+  scroll-snap-type: y mandatory; /* Configura el scroll snap */
+  margin: 0;
+  padding: 0;
+  height: 400em;
+}
+*{
+  color: #ffffff;
 }
 
 /* BACKGROUND */
 
 .Back__ground {
+    position: relative;
   width: 100%;
-  height: 100vh;
-  position: relative;
-  background: url("Imagenes/FondoBobMarley.png") no-repeat, center;
+  height: 400em;
+  background: url("Imagenes/FondoBobMarley.png");
   background-size: cover;
 }
 
 .Back__ground--Blur {
+  display: grid;
+  grid-template-rows: 300px 80em 90em 1fr 1fr;
+  position: absolute; 
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 100vh;
-  backdrop-filter: blur(3rem);
+  height: 400em;
+  backdrop-filter: blur(3rem);/
 }
 /* ----------------NAV-------------- */
 nav {
@@ -40,16 +53,113 @@ li {
 
 a {
   text-decoration: none;
-  color: black;
+  color: #ffffff;
 }
 
-/* ------------------MAIN-------------- */
+/* ------------Section about me -------- */
+.About__me--section{
+border: solid 10px black;
+ scroll-snap-align: start; /* Alinea el inicio de cada sección */
+height: 63em;
+}
+/* ---------Section Description ------- */
 
-main {
-  display: flex;
+.Description__section{
+  font-size: 7em;
+   scroll-snap-align: start; /* Alinea el inicio de cada sección */
+  height: 10em;
+  border: solid 10px black;
+}
+/* ---------Skills Description ------- */
+
+
+
+/* ------SOFT SKILLS */
+.Skills__section{
+display: grid;
+ scroll-snap-align: start; /* Alinea el inicio de cada sección */
+grid-template-columns: 1fr 1fr;
+height: 60em;
+gap: 5em;
+}
+
+.Soft__skills{
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  background-color: #e89f00;
   align-items: center;
-  margin-left: 10em;
+  margin: 6em 0 0 10em;
+  border-radius: 2em;
+  width: 50em; 
+  height: 50em;
+  box-shadow: #ffffff 0 0 1em;
+   transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Añade la transición */
 }
+.Soft__skills:hover {
+  opacity: 0.6;
+  transform: scale(1.1);
+  transition: 0.5s;
+  text-shadow: #ffffff 0 0 1em;
+}
+
+.Soft__skills ul{
+margin: 0;
+padding: 0;
+
+}
+
+.Soft__skills ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0.5em 0; 
+  padding: 0;
+  font-size: 2.2em;
+   transition: transform 0.5s ease-in-out, background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+   opacity: 0.6;
+   font-weight: 600;
+}
+.Soft__skills ul li:hover {
+  color: #ffffff;
+  transition: transform 0.5s ;
+  transform: scale(1.1);
+ opacity: 1;
+}
+
+.Soft__skills ul li img {
+  width: 3em;
+  height: auto; 
+  margin-top: 0.5em; 
+}
+
+.Soft__skills ul li span {
+  transition: color 0.5s ease-in-out;
+}
+
+/* ---------HARDSKILL------- */
+
+.Hard__skills {
+  display: flex;
+  flex-direction: row;
+  background-color:#b33519 ;
+  align-items: center;
+  justify-content: center;
+  margin-left: 3em;
+  border-radius: 2em;
+  width: 60em; /* Ajusta el ancho a 80em */
+  height: 60em; */
+
+
+}
+
+
+.Hard__skills:hover {
+  opacity: 0.6;
+  transform: scale(1.1);
+  transition: 0.5s;
+  text-shadow: #ffffff 0 0 1em;
+}
+
 /* ----------------ABOUT ME--------------------- */
 
 .About__me {
@@ -69,3 +179,18 @@ footer {
   margin-top: auto;
   text-align: center;
 }
+
+#blurPointer {
+ position: fixed; /* Cambia a fixed para que siga el cursor */
+  width: 20px;
+  height: 20px;
+  background-color: rgba(255, 255, 255, 0.5); /* Color blanco con opacidad */
+  border-radius: 50%; /* Hace que el div sea una bola */
+  pointer-events: none; /* Permite hacer clic a través del div */
+  filter: blur(5px); /* Aplica el efecto de desenfoque */
+  transition: width 0.2s ease, height 0.2s ease, filter 0.2s ease; /* Transiciones suaves */
+  z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+}
+}
+
+
