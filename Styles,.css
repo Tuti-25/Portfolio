@@ -36,7 +36,7 @@ body {
   margin: 10em 0 10em 0;
   border: 1.5em solid #ffffff;
   position: relative;
-  height: 450em;
+  height: 500em;
 }
 
 /* NAV */
@@ -114,25 +114,21 @@ Nav ul {
 /* BUTTON NAV */
 
 .Div__button--header {
-  background-color: #ffffff;
-  padding: 3em;
-  border-radius: 10px;
-  font-weight: 900;
 }
 .Buttom__CV--header {
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   border: none;
-  height: 5em;
-  width: 15em;
   font-size: 2em;
   color: #e84a35;
+  background-color: #ffffff;
+  padding: 2em;
+  border-radius: 10px;
+  font-weight: 900;
 }
 .Buttom__CV--header:hover {
   text-decoration: none;
-    color: #e84a35;
-
-  co
+  color: #e84a35;
 }
 
 /* ABOUT ME */
@@ -325,9 +321,7 @@ Nav ul {
   margin: 0.5em 1em 0 0;
   transition: transform 0.5s ease-in-out;
   text-decoration: none;
-
 }
-
 
 .i_link1 i,
 .i_link2 i,
@@ -627,16 +621,19 @@ Nav ul {
 
 /* DIV__CONTACT */
 
+.Div__main--contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+  gap: 2em; /* Espacio entre las columnas */
+}
 .Div__contact {
   background-color: #e84a35;
-  height: 12em;
-  width: 80%;
-  margin-top: 10em;
-  display: grid;
-  grid-template-columns: 20em 1fr;
-  margin: auto;
-  margin-top: 10em;
+  height: 100%;
+  width: 90%;
   border-radius: 10px;
+  margin-left: 2em;
+  box-shadow: #111111 0px 0px 10px;
+  border-radius: 5px;
 }
 .findme {
   color: #ffffff;
@@ -644,17 +641,17 @@ Nav ul {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: row;
   font-size: 2em;
-  margin-left: 3em;
+  height: 20%;
 }
 
 .contact__social {
   display: flex;
-  flex-direction: row;
-  gap: 6em;
-  align-items: center;
-  margin-left: 4em;
+  flex-direction: column;
+  gap: 1em;
 }
+
 .contact__mail,
 .contact__git,
 .contact__linkedin,
@@ -688,10 +685,118 @@ Nav ul {
 .contact__git:hover,
 .contact__linkedin:hover,
 .contact__tel:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
   transition: 0.5s;
 }
 
+.mail__social,
+.git__social,
+.linkedin__social,
+.tel__social {
+  margin-left: 3em;
+  font-size: 2em;
+  width: 100%;
+  color: #ffffff;
+  font-weight: 900;
+  display: block;
+  align-items: center;
+}
+
+.mail__social:hover,
+.git__social:hover,
+.linkedin__social:hover,
+.tel__social:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+#Section__Contact h3 {
+  color: #ffffff;
+  font-size: 3em;
+  font-weight: 900;
+  margin: 0;
+  text-align: center;
+  margin-top: 5em;
+  margin-bottom: 3em;
+}
+
+/* LEAVE A MESSAGE---------------------- */
+.Div__message {
+  background-color: #e84a35;
+  height: 12em;
+  width: 100%;
+  font-size: 3em;
+  box-shadow: #111111 0px 0px 10px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Div__message h2 {
+  text-align: center;
+  color: #ffffff;
+  font-weight: 900;
+}
+
+.review-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#reviewName,
+#reviewText {
+  width: 13em;
+  margin-bottom: 0.3em;
+  background-color: #ffffff;
+  border-radius: 10px;
+  color: e84a35;
+}
+
+#reviewText {
+  height: 6em;
+}
+
+.btn__message {
+  border: none;
+  font-size: 0.5em;
+  color: #e84a35;
+  background-color: #ffffff;
+  padding: 1em 2em 1em 2em;
+  border-radius: 10px;
+  font-weight: 900;
+}
+.btn__message:hover {
+  text-decoration: none;
+  color: #e84a35;
+}
+
+/* FOOTER--------------- */
+.Div__footer {
+  background-color: #e84a35;
+  height: 5em;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  border-top: solid 10px #db4730;
+}
+
+footer a {
+  font-size: 2em;
+  color: #ffffff;
+  margin-right: 2em;
+}
+
+footer a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
 /* CAROUSEL---------------- */
 .carousel-inner {
 }

@@ -19,15 +19,12 @@
         <header>
           <nav>
             <div class="Div__nav">
-              <div class="Div__button--header">
 <a class="Buttom__CV--header " href="https://drive.google.com/uc?id=1UzXC0g0OkZp0jQadBHQ1kFhGuSumoL9k&export=download" download>Download CV</a>
-
-              </div>
                   <div class="Nav__menu">
                     <ul>
                       <li><a href="#education">Education</a></li>
                       <li><a href="#skills">Skills</a></li>
-                      <li><a href="#contact">Contact</a></li>
+                      <li><a href="#Section__Contact">Contact</a></li>
                     </ul>
                   </div>
           <div class="Nav__social">           
@@ -291,24 +288,44 @@
                         </div>
                     </div>
                 </section>
-              <section class="Section__Contact">
-          <div class="Div__contact">
-            <div class="findme"><p>You can find <br>me here:</p></div>
-            <div class="contact__social">
-              <a href="mailto:tutidecalle076@gmail.com"> <div class="contact__mail"></div></a>
-              <a href="https://github.com/Tuti-25"><div class="contact__git"></div></a>
-              <a href="https://linkedin.com/in/tuti-25-kenneth-gonzalez" ><div class="contact__linkedin"></div></a>
-              <a href="tel+50689171551"><div class="contact__tel"></div></a>
-            </div>
-          </div>
-        </section>
-      </div>
-        <footer></footer>
-      </div>
+              <section id="Section__Contact">
+              <h3>Contact</h3>
+<div class="Div__main--contact">
+  <div class="Div__contact">
+    <div class="findme">
+      <p>Find me on social media:</p>
     </div>
-      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <div class="contact__social">
+      <a href="mailto:tutidecalle076@gmail.com"> <div class="contact__mail"> <a class="mail__social" href="mailto:tutidecalle076@gmail.com">tutidecalle076@gmail.com</a></div> </a>
+      <a href="https://github.com/Tuti-25"> <div class="contact__git"><a class="git__social" href="https://github.com/Tuti-25">Tuti</a></div></a>
+      <a href="https://linkedin.com/in/tuti-25-kenneth-gonzalez"> <div class="contact__linkedin"> <a class="linkedin__social" href="https://linkedin.com/in/tuti-25-kenneth-gonzalez">Kenneth</a></div></a>
+      <a href="tel:+50689171551"> <div class="contact__tel"> <a class="tel__social" href="el:+50689171551">89171551</a></div></a>
+    </div>
+  </div>
+  <div class="Div__message">
+    <h2>Leave a Message</h2>
+    <form class="review-form">
+      <input type="text" id="reviewName" placeholder="Your Name">
+      <textarea id="reviewText" placeholder="Your Message"></textarea>
+      <button class="btn__message" type="submit">Send</button>
+    </form>
+  </div>
+</div>
+                </section>
+                  <section class="Section__footer">
+                    <div class="Div__footer">
+                      <footer>
+                        <a href="mailto:tutidecalle076@gmail.com ">Gmail: tutidecalle076@gmail.com </a>
+                        <a href="tel:+50689171551">Tel: +506 89171551</a>
+                      </footer>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </div>
+          <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <script>
         function showDiv(index) {
             $('#skillsCarousel').carousel(index);
