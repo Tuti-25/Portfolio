@@ -3,49 +3,193 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
     <link rel="stylesheet" href="Styles,.css" />
+    <title>Document</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script src="Script.Js"></script>
   </head>
   <body>
-    <header>
-      <nav>
-        <ul class="nav__ul">
-          <li><a href="">Contact</a></li>
-          <li><a href="">About me</a></li>
-          <li><a href="">Projects</a></li>
-          <li><a href="">Download CV</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <div class="About__me">
-        <h5>Hi, I'm</h5>
-        <h1>Kenneth Gonzalez Matamoros</h1>
-        <p>Working on learning as much as I can</p>
-      </div>
+    <div class="Back__ground">
+      <div class="Div__main">
+        <header>
+          <nav>
+            <button class="Buttom__CV--header">Download CV</button>
+            <ul class="Nav__menu">
+              <li>About me</li>
+              <li>Skills</li>
+              <li>Contact</li>
+            </ul>
+            <ul class="Nav__social">
+              <li><i class="fa-brands fa-github"></i></li>
+              <li><i class="fa-brands fa-linkedin"></i></li>
+              <li><i class="fa-solid fa-envelope"></i></li>
+            </ul>
+          </nav>
+        </header>
+        <section class="Section__aboutme">
+          <div class="Div__Section__aboutme">
+            <div class="Div__aboutme--info">
+              <h5>Future Full-Stack</h5>
+              <h1>Kenneth <br />Gonzalez Matamoros</h1>
+              <div class="Div__aboutme--text">
+                <div>
+                  <p>
+                    Almoust graduated and <br />
+                    learning as much as i can
+                  </p>
+                </div>
+                <div><i class="fa-solid fa-trophy"></i></div>
+              </div>
+              <button class="Buttom__CV">CV</button>
+            </div>
+            <div class="img__aboutme"></div>
+          </div>
+        </section>
+        <section class="Section__education">
+          <div class="Div__education">
+            <div class="Div__education--info">
+              <h3>Education</h3>
+              <p class="Bachelor">Bachelors degrees</p>
+              <div class="img__education"></div>
+              <h4>Bachelor's in Computer Engineering</h4>
+              <p class="universidad">
+                UNIVERSIDAD LATINOAMERICANA DE CIENCIAS Y TECNOLOGIA.
+                <br />Expected Graduation: December, 2025.
+              </p>
+            </div>
+            <div class="Div__certifications">
+              <div class="Div__certifications--oracle">
+                <div class="testing">
+                  <div>
+                    <h3>Certification</h3>
+                    <p class="oracle">Oracle</p>
+                  </div>
+                  <div class="i_link">
+                    <i class="fa-solid fa-link"></i>
+                  </div>
+                </div>
+                <div class="img_certification--oracle"></div>
+                <h4>
+                  Oracle Cloud Infrastructure 2024 Certified AI Foundations
+                  Associate.
+                </h4>
+                <div class="div__buttom--oracle">
+                  <div></div>
+                  <button class="button__oracle">CERTIFICATION</button>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+            <div class="Div__certifications--certiprof">
+              <div class="testing1">
+                <div>
+                  <h3>Certification</h3>
+                  <p class="certiprof">Certiprof</p>
+                </div>
+                <div class="i_link1">
+                  <i class="fa-solid fa-link"></i>
+                </div>
+              </div>
+              <div class="img_certification--certiprof"></div>
+              <h4>Scrum Foundation Professional Certificate (SFPC) English.</h4>
+              <div class="div__buttom--certiprof">
+                <div></div>
+                <button class="button__certiprof">CERTIFICATION</button>
+                <div></div>
+              </div>
+            </div>
+            <div class="Div__certifications--certiprof2">
+              <div class="testing2">
+                <div>
+                  <h3>Certification</h3>
+                  <p class="certiprof">Certiprof</p>
+                </div>
+                <div class="i_link2">
+                  <i class="fa-solid fa-link"></i>
+                </div>
+              </div>
+              <div class="img_certification--certiprof2"></div>
+              <h4>
+                Business Intelligence Foundation Professional Certification
+                BIFPC™.
+              </h4>
+              <div class="div__buttom--certiprof2">
+                <div></div>
+                <button class="button__certiprof2">CERTIFICATION</button>
+                <div></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="Section__Skills"></section>
+        <div class="Div__skills">
+          <h2>SKILLS</h2>
+          <div class="buttons__skills">
+    <button onclick="showDiv('programming_languages')">Programming Languages</button>
+    <button onclick="showDiv('tools_technologies')">Tools and Technologies</button>
+    <button onclick="showDiv('methodologies_systems')">Methodologies and Operating Systems</button>
+          </div>
+                        <div id="programming_languages" class="content-div Div__skills">            <tbody>
+              <table>
+                <tr>
+                  <td><p class="date">2024</p></td>
+                  <td>
+                    <div class="img__js"></div>
+                  </td>
+                  <td><p class="name_language">JavaScript</p></td>
+                  <td><p class="coding__level">Basic</p></td>
+                </tr>
+                <tr>
+                  <td><p class="date">2024</p></td>
+                  <td><div class="img__csharp"></div></td>
+                  <td><p class="name_language">C#</p></td>
+                  <td><p class="coding__level">Intermediate-Advance</p></td>
+                </tr>
+                <tr>
+                  <td><p class="date">2022-2023</p></td>
+                  <td>
+                    <div class="img__java"></div>
+                  </td>
+                  <td><p class="name_language">Java</p></td>
+                  <td><p class="coding__level">Intermediate-Advance</p></td>
+                </tr>
+                <tr>
+                  <td><p class="date">2022</p></td>
+                  <td><div class="img__python"></div></td>
+                  <td><p class="name_language">Python</p></td>
+                  <td><p class="coding__level">Basic</p></td>
+                </tr>
+                <tr>
+                  <td><p class="date">2018</p></td>
+                  <td><div class="img__cmas"></div></td>
+                  <td><p class="name_language">C++</p></td>
+                  <td><p class="coding__level">Basic</p></td>
+                </tr>
+                <tr>
+                  <td><p class="date">2024</p></td>
+                  <td><div class="img__html"></div></td>
+                  <td><p class="name_language">HTML</p></td>
+                  <td><p class="coding__level">Intermediate</p></td>
+                </tr>
+                <tr>
+                  <td><p class="date">2024</p></td>
+                  <td><div class="img__css"></div></td>
+                  <td><p class="name_language">CSS</p></td>
+                  <td><p class="coding__level">Intermediate</p></td>
+                </tr>
+              </table>
+            </tbody>
+          </div>
+                        <div id="tools_technologies" class="content-div Div__skills">
+                        <div id="methodologies_systems" class="content-div Div__skills">
+        </div>
 
-      <!-- <div class="Skills">
-        <h3>Skills</h3>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi
-          atque quas pariatur deleniti obcaecati eveniet exercitationem,
-          veritatis adipisci voluptatibus vero asperiores, harum temporibus
-          iusto incidunt saepe, necessitatibus maxime! Quaerat, impedit.
-        </p>
+        <section class="Section__Contact"></section>
+        <footer></footer>
       </div>
-      <div class="Projects">
-        <h3>Projects</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis a qui
-          quidem error veritatis debitis recusandae quam. Nesciunt perferendis
-          unde cupiditate? Praesentium voluptatibus, aliquam soluta nulla amet
-          repellat reprehenderit eos.
-        </p>
-      </div> -->
-    </main>
-
-    <footer>
-      <p>Derechos autor reservados</p>
-    </footer>
+    </div>
   </body>
 </html>
