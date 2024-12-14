@@ -7,10 +7,12 @@ body {
 .Back__ground {
   position: relative;
   width: 100%;
-  height: 500em;
+  height: 600em;
   overflow: hidden;
   display: flex;
+  flex-direction: row;
   justify-content: center;
+  align-items: start;
 }
 
 .Back__ground::before {
@@ -33,15 +35,18 @@ body {
   width: 70%;
   margin: 10em 0 10em 0;
   border: 1.5em solid #ffffff;
+  position: relative;
+  height: 450em;
 }
 
 /* NAV */
 
-Nav {
+.Div__nav {
   display: grid;
-  grid-template-rows: 1.5fr 1fr 1fr;
+  grid-template-columns: 1fr 1.5fr 1fr;
   justify-content: center;
   align-items: center;
+  text-align: center;
   margin: 2em;
   border: #e84931 solid 5px;
   border-radius: 10px;
@@ -59,43 +64,75 @@ Nav ul {
 
 .Nav__menu {
   display: flex;
-  justify-content: right;
+  justify-content: center;
 }
 .Nav__menu li {
-  margin-left: 1em;
+  margin-right: 1em;
   font-size: 1.3em;
   font-weight: 700;
+}
+.Nav__menu ul {
+  margin: 0;
 }
 
 /* NAV SOCIAL */
 
 .Nav__social {
   display: flex;
-  justify-content: right;
+  justify-content: center;
+  align-items: center;
 }
 
 .Nav__social li {
   margin-right: 1em;
-  font-size: 1.5em;
+  font-size: 2.5em;
   color: #ffffff;
+  transition: transform 0.5s ease-in-out;
+}
+.Nav__social ul {
+  margin: 0;
 }
 
+.Nav__social a,
+.Nav__menu a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.Nav__social a:hover,
+.Nav__menu a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* HOVER NAV SOCIAL--------------------- */
 .Nav__social li:hover {
-  margin-right: 1em;
-  font-size: 1.5em;
-  border-radius: 50%;
-  border: solid #fada28 3px;
-  padding: 12px;
-  transition: 0.1s;
-  padding: 10px;
+  transform: scale(1.5);
+  transition: 0.5s;
 }
 
 /* BUTTON NAV */
+
+.Div__button--header {
+  background-color: #ffffff;
+  padding: 3em;
+  border-radius: 10px;
+  font-weight: 900;
+}
 .Buttom__CV--header {
-  height: 100%;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   border: none;
+  height: 5em;
+  width: 15em;
+  font-size: 2em;
+  color: #e84a35;
+}
+.Buttom__CV--header:hover {
+  text-decoration: none;
+    color: #e84a35;
+
+  co
 }
 
 /* ABOUT ME */
@@ -104,18 +141,26 @@ Nav ul {
   margin-top: 10em;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: 40em 40em;
 }
 
+.Div__Section__aboutme > :nth-child(2) {
+  height: 120em;
+  padding: 10em 10em 25em 10em; /* Establece la altura de la segunda columna */
+}
 .img__aboutme {
   background-image: url("/Imagenes/BackBob.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   height: 100%;
-  width: 100%;
+  width: 60%;
   padding: 10em 10em 25em 10em;
-  box-shadow: #111111 0px 0px 10px;
+  box-shadow: #111111 0px 0px 50px;
   border-radius: 10px;
+  position: absolute;
+  right: 60%;
+  transform: translateX(120%);
 }
 
 /* ABOUME INFO */
@@ -123,14 +168,15 @@ Nav ul {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  margin-right: 2em;
+  margin-right: 3em;
 }
 
 .Div__aboutme--info h5 {
   color: #f7d22a;
   letter-spacing: 0.5em;
   font-size: 1.5em;
-  margin-top: 10em;
+  margin-top: 25em;
+  font-weight: 700;
 }
 
 .Div__aboutme--info h1 {
@@ -139,6 +185,8 @@ Nav ul {
   text-align: right;
   direction: rtl;
   margin-top: 0;
+  font-weight: 900;
+  margin: 0.5em 0 0.5em 0;
 }
 .Div__aboutme--text {
   display: grid;
@@ -162,6 +210,8 @@ Nav ul {
   text-align: right;
   direction: rtl;
   letter-spacing: 0.1em;
+  font-weight: 700;
+  margin-right: 1em;
 }
 
 /* ABOUTME BUTTOM */
@@ -170,7 +220,22 @@ Nav ul {
   margin-top: 4em;
   height: 6em;
   width: 40%;
+  background-color: #ffffff;
+  border-radius: 6px;
+  padding: 1em;
+  text-decoration: none;
+  font-weight: 900;
+  color: #e84a35;
+  text-align: center;
+  font-size: 1.5em;
 }
+
+.Buttom__CV:hover {
+  color: #e84a35;
+  text-decoration: none;
+}
+
+/*
 
 /* EDUCATION SECTION  -------------------*/
 .Div__education {
@@ -194,9 +259,10 @@ Nav ul {
 
 .universidad {
   margin: 0%;
-  margin: 2em 0 0 5em;
+  margin: 2em 0 0 3.8em;
   color: #ffffff;
-  font-size: 0.8em;
+  font-size: 1em;
+  font-weight: 600;
 }
 
 /* CERTIFICATIONES CERTIPROF 1 -----------------*/
@@ -258,7 +324,10 @@ Nav ul {
   justify-content: end;
   margin: 0.5em 1em 0 0;
   transition: transform 0.5s ease-in-out;
+  text-decoration: none;
+
 }
+
 
 .i_link1 i,
 .i_link2 i,
@@ -266,6 +335,7 @@ Nav ul {
   border: rgba(221, 221, 221, 0.3) solid 3px;
   border-radius: 10px;
   padding: 0.2em;
+  color: #ffffff;
 }
 
 .button__certiprof,
@@ -347,6 +417,8 @@ Nav ul {
 .i_link i:hover {
   background-color: rgba(221, 221, 221, 0.3);
   transition: 0.5s;
+  text-decoration: none;
+  color: #ffffff;
 }
 .button__certiprof:hover,
 .button__certiprof2:hover,
@@ -382,11 +454,12 @@ Nav ul {
   transition: transform 1s ease-in-out;
 }
 .buttons__skills button {
-  height: 4em;
+  height: 6em;
+  width: 14em;
   font-size: 1em;
   border-radius: 10px;
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 900;
   background-color: #e84a35;
   color: #ffffff;
   border: none;
@@ -512,7 +585,6 @@ Nav ul {
 }
 .img__scrum {
   background-image: url("Imagenes/scrum.png");
-  background-color: #ffffff;
 }
 /* CAROUSEL */
 .img__jira {
@@ -553,7 +625,72 @@ Nav ul {
   color: #e3573b;
 }
 
-/* ...existing code... */
+/* DIV__CONTACT */
+
+.Div__contact {
+  background-color: #e84a35;
+  height: 12em;
+  width: 80%;
+  margin-top: 10em;
+  display: grid;
+  grid-template-columns: 20em 1fr;
+  margin: auto;
+  margin-top: 10em;
+  border-radius: 10px;
+}
+.findme {
+  color: #ffffff;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+  margin-left: 3em;
+}
+
+.contact__social {
+  display: flex;
+  flex-direction: row;
+  gap: 6em;
+  align-items: center;
+  margin-left: 4em;
+}
+.contact__mail,
+.contact__git,
+.contact__linkedin,
+.contact__tel {
+  width: 80px;
+  height: 80px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  padding: 1.5em;
+  margin-left: 2em;
+  border: #ffffff solid 6px;
+  transition: transform 0.7s ease-in-out;
+}
+.contact__mail {
+  background-image: url("/Imagenes/gmail.png");
+}
+.contact__git {
+  background-image: url("/Imagenes/github-sign.png");
+}
+.contact__linkedin {
+  background-image: url("/Imagenes/linkedin5.png");
+}
+.contact__tel {
+  background-image: url("/Imagenes/mobile.png");
+}
+
+/* CONTACT HOVER---------------- */
+.contact__social a:hover,
+.contact__mail:hover,
+.contact__git:hover,
+.contact__linkedin:hover,
+.contact__tel:hover {
+  transform: scale(1.2);
+  transition: 0.5s;
+}
 
 /* CAROUSEL---------------- */
 .carousel-inner {
