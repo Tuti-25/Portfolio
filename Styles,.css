@@ -30,7 +30,7 @@ body {
 
 .Div__main {
   background-color: #f2573f;
-  width: 60%;
+  width: 70%;
   margin: 10em 0 10em 0;
   border: 1.5em solid #ffffff;
 }
@@ -39,7 +39,7 @@ body {
 
 Nav {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr;
+  grid-template-rows: 1.5fr 1fr 1fr;
   justify-content: center;
   align-items: center;
   margin: 2em;
@@ -177,7 +177,7 @@ Nav ul {
   display: grid;
   grid-template-columns: 35em 35em;
   grid-template-rows: 50em 50em;
-  gap: 4em;
+  gap: 5em;
   margin-top: 50em;
   justify-content: center;
 }
@@ -203,7 +203,7 @@ Nav ul {
 
 .Div__certifications--certiprof,
 .Div__certifications--certiprof2,
-.Div__certifications,
+.Div__certifications--oracle,
 .Div__education--info {
   background-color: #e34934;
   border-radius: 10px;
@@ -233,7 +233,7 @@ Nav ul {
 .Div__certifications--oracle h4,
 .Div__education--info h4 {
   color: #ffffff;
-  font-size: 2em;
+  font-size: 1.8em;
   margin: 0%;
   margin-left: 2em;
 }
@@ -337,7 +337,7 @@ Nav ul {
 .i_link:hover,
 .Div__certifications--certiprof:hover,
 .Div__certifications--certiprof2:hover,
-.Div__certifications:hover,
+.Div__certifications--oracle:hover,
 .Div__education--info:hover {
   transform: scale(1.05);
 }
@@ -358,7 +358,7 @@ Nav ul {
 
 /* ----------------------SECTION SKILLS----------------- */
 .Div__skills {
-  margin-top: 20em;
+  margin-top: 7em;
   display: grid;
   grid-template-rows: 10em 8em 1fr;
   justify-content: center;
@@ -373,10 +373,13 @@ Nav ul {
 }
 
 /* BUTTON SKILLS---------------------------------  */
-.buttoms__skills {
+.buttons__skills {
   display: flex;
   justify-content: center;
-  gap: 0.2em;
+  gap: 0.5em;
+  align-items: center;
+  width: 100%;
+  transition: transform 1s ease-in-out;
 }
 .buttons__skills button {
   height: 4em;
@@ -387,34 +390,44 @@ Nav ul {
   background-color: #e84a35;
   color: #ffffff;
   border: none;
+  transition: transform 1s ease-in-out, background-color 1s, color 1s;
+  border: #de472c solid 4px;
 }
 
 /* PROGRAMMING LANGUAGES---------------- */
-#programming_languages {
+#programming_languages,
+#tools_technologies,
+#methodologies_systems {
   display: flex;
   flex-direction: column;
 }
 
-#programming_languages tr {
+#programming_languages tr,
+#tools_technologies tr,
+#methodologies_systems tr {
   display: flex;
   flex-direction: row;
-  margin-top: 0.3em;
-  border-top: #de472c solid 1px;
   border-left: none;
   border-right: none;
-  width: 100%;
-  padding: 1em 0 1em 0;
   font-size: 2em;
+  transition: background-color 1s, opacity 1s;
+  border-radius: 10px;
+  padding-bottom: 2em;
 }
 
-#programming_languages td {
+#programming_languages td,
+#tools_technologies td,
+#methodologies_systems td {
   width: 100%;
   color: #ffffff;
   font-weight: 900;
   font-size: 1em;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-end;
+  transition: color 1s;
+  border-top: #de472c solid 3px;
+  height: 100%;
 }
 
 .img__java,
@@ -423,13 +436,26 @@ Nav ul {
 .img__cmas,
 .img__python,
 .img__html,
-.img__css {
-  background-image: url("Imagenes/java.png");
-  width: 70px;
-  height: 70px;
+.img__css,
+.img__wordpress,
+.img__bootstrap,
+.img__sql,
+.img__github,
+.img__git,
+.img__vscode,
+.img__vsstudio,
+.img__netbeans,
+.img__scrum,
+.img__jira,
+.img__trello,
+.img__windows,
+.img__linux {
+  width: 68px;
+  height: 68px;
   background-size: cover;
   background-position: center;
   border-radius: 10px;
+  padding: 1.5em;
 }
 
 .img__csharp {
@@ -454,4 +480,90 @@ Nav ul {
 }
 .img__css {
   background-image: url("Imagenes/css-3.png");
+}
+
+.img__wordpress {
+  background-image: url("Imagenes/wordpress.png");
+}
+.img__bootstrap {
+  background-image: url("Imagenes/media.png");
+}
+
+.img__sql {
+  background-image: url("Imagenes/sql-server.png");
+}
+.img__git {
+  background-image: url("Imagenes/social.png");
+}
+
+.img__github {
+  background-image: url("Imagenes/github.png");
+}
+
+.img__vscode {
+  background-image: url("Imagenes/vscode.png");
+}
+
+.img__vsstudio {
+  background-image: url("Imagenes/visual-studio.png");
+}
+.img__netbeans {
+  background-image: url("Imagenes/java2.png");
+}
+.img__scrum {
+  background-image: url("Imagenes/scrum.png");
+  background-color: #ffffff;
+}
+/* CAROUSEL */
+.img__jira {
+  background-image: url("Imagenes/jira.png");
+}
+.img__trello {
+  background-image: url("Imagenes/trello.png");
+}
+.img__windows {
+  background-image: url("Imagenes/windows.png");
+}
+.img__linux {
+  background-image: url("Imagenes/linux.png");
+}
+
+/* HOVER SKILLS */
+
+/* ...existing code... */
+
+#programming_languages tr:hover,
+#tools_technologies tr:hover,
+#methodologies_systems tr:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+#programming_languages tr:hover td,
+#tools_technologies tr:hover td,
+#methodologies_systems tr:hover td {
+  transition: 1s;
+  color: #e3573b;
+  opacity: 1;
+}
+
+/* HOVER BUTTON SKILLS------------- */
+.buttons__skills button:hover,
+.buttons__skills button:active {
+  background-color: #ffffff;
+  color: #e3573b;
+}
+
+/* ...existing code... */
+
+/* CAROUSEL---------------- */
+.carousel-inner {
+}
+.carousel {
+  width: 60em;
+  margin: 0 auto;
+}
+
+.carousel-item {
+  padding: 0;
+  margin: 0;
 }

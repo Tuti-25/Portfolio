@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="Styles,.css" />
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <title>Document</title>
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -18,15 +20,18 @@
           <nav>
             <button class="Buttom__CV--header">Download CV</button>
             <ul class="Nav__menu">
+            <div>            
               <li>About me</li>
               <li>Skills</li>
-              <li>Contact</li>
+              <li>Contact</li></div>
             </ul>
-            <ul class="Nav__social">
+          <div>           
+             <ul class="Nav__social">
               <li><i class="fa-brands fa-github"></i></li>
               <li><i class="fa-brands fa-linkedin"></i></li>
               <li><i class="fa-solid fa-envelope"></i></li>
             </ul>
+          </div>
           </nav>
         </header>
         <section class="Section__aboutme">
@@ -60,7 +65,6 @@
                 <br />Expected Graduation: December, 2025.
               </p>
             </div>
-            <div class="Div__certifications">
               <div class="Div__certifications--oracle">
                 <div class="testing">
                   <div>
@@ -82,7 +86,6 @@
                   <div></div>
                 </div>
               </div>
-            </div>
             <div class="Div__certifications--certiprof">
               <div class="testing1">
                 <div>
@@ -124,72 +127,176 @@
             </div>
           </div>
         </section>
-        <section class="Section__Skills"></section>
-        <div class="Div__skills">
-          <h2>SKILLS</h2>
-          <div class="buttons__skills">
-    <button onclick="showDiv('programming_languages')">Programming Languages</button>
-    <button onclick="showDiv('tools_technologies')">Tools and Technologies</button>
-    <button onclick="showDiv('methodologies_systems')">Methodologies and Operating Systems</button>
-          </div>
-                        <div id="programming_languages" class="content-div Div__skills">            <tbody>
-              <table>
-                <tr>
-                  <td><p class="date">2024</p></td>
-                  <td>
-                    <div class="img__js"></div>
-                  </td>
-                  <td><p class="name_language">JavaScript</p></td>
-                  <td><p class="coding__level">Basic</p></td>
-                </tr>
-                <tr>
-                  <td><p class="date">2024</p></td>
-                  <td><div class="img__csharp"></div></td>
-                  <td><p class="name_language">C#</p></td>
-                  <td><p class="coding__level">Intermediate-Advance</p></td>
-                </tr>
-                <tr>
-                  <td><p class="date">2022-2023</p></td>
-                  <td>
-                    <div class="img__java"></div>
-                  </td>
-                  <td><p class="name_language">Java</p></td>
-                  <td><p class="coding__level">Intermediate-Advance</p></td>
-                </tr>
-                <tr>
-                  <td><p class="date">2022</p></td>
-                  <td><div class="img__python"></div></td>
-                  <td><p class="name_language">Python</p></td>
-                  <td><p class="coding__level">Basic</p></td>
-                </tr>
-                <tr>
-                  <td><p class="date">2018</p></td>
-                  <td><div class="img__cmas"></div></td>
-                  <td><p class="name_language">C++</p></td>
-                  <td><p class="coding__level">Basic</p></td>
-                </tr>
-                <tr>
-                  <td><p class="date">2024</p></td>
-                  <td><div class="img__html"></div></td>
-                  <td><p class="name_language">HTML</p></td>
-                  <td><p class="coding__level">Intermediate</p></td>
-                </tr>
-                <tr>
-                  <td><p class="date">2024</p></td>
-                  <td><div class="img__css"></div></td>
-                  <td><p class="name_language">CSS</p></td>
-                  <td><p class="coding__level">Intermediate</p></td>
-                </tr>
-              </table>
-            </tbody>
-          </div>
-                        <div id="tools_technologies" class="content-div Div__skills">
-                        <div id="methodologies_systems" class="content-div Div__skills">
-        </div>
-
+  <section class="Section__Skills"></section>
+                    <div class="Div__skills">
+                        <h2>SKILLS</h2>
+                        <div class="buttons__skills">
+                            <button onclick="showDiv(0)">Programming Languages</button>
+                            <button onclick="showDiv(1)">Tools and Technologies</button>
+                            <button onclick="showDiv(2)">Methodologies and Operating Systems</button>
+                        </div>
+                        <div id="skillsCarousel" class="carousel slide" data-ride="carousel" data-interval="10000">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div id="programming_languages" class="content-div Div__skills">
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <td><p class="date">2024</p></td>
+                                                    <td><div class="img__js"></div></td>
+                                                    <td><p class="name_language">JavaScript</p></td>
+                                                    <td><p class="coding__level">Basic</p></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><p class="date">2024</p></td>
+                                                    <td><div class="img__csharp"></div></td>
+                                                    <td><p class="name_language">C#</p></td>
+                                                    <td><p class="coding__level">Intermediate-Advance</p></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><p class="date">2022</p></td>
+                                                    <td><div class="img__java"></div></td>
+                                                    <td><p class="name_language">Java</p></td>
+                                                    <td><p class="coding__level">Intermediate-Advance</p></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><p class="date">2022</p></td>
+                                                    <td><div class="img__python"></div></td>
+                                                    <td><p class="name_language">Python</p></td>
+                                                    <td><p class="coding__level">Basic</p></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><p class="date">2018</p></td>
+                                                    <td><div class="img__cmas"></div></td>
+                                                    <td><p class="name_language">C++</p></td>
+                                                    <td><p class="coding__level">Basic</p></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><p class="date">2024</p></td>
+                                                    <td><div class="img__html"></div></td>
+                                                    <td><p class="name_language">HTML</p></td>
+                                                    <td><p class="coding__level">Intermediate</p></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><p class="date">2024</p></td>
+                                                    <td><div class="img__css"></div></td>
+                                                    <td><p class="name_language">CSS</p></td>
+                                                    <td><p class="coding__level">Intermediate</p></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div id="tools_technologies" class="content-div Div__skills">
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <td><p class="date">2024</p></td>
+                                                    <td><div class="img__wordpress"></div></td>
+                                                    <td><p class="name_language">Wordpress</p></td>
+                                                    <td><p class="coding__level">Basic</p></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><p class="date">2024</p></td>
+                                                    <td><div class="img__bootstrap"></div></td>
+                                                    <td><p class="name_language">Bootstrap</p></td>
+                                                    <td><p class="coding__level">Basic</p></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><p class="date">2022</p></td>
+                                                    <td><div class="img__sql"></div></td>
+                                                    <td><p class="name_language">SQL</p></td>
+                                                    <td><p class="coding__level">Intermediate</p></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><p class="date">2024</p></td>
+                                                    <td><div class="img__git"></div></td>
+                                                    <td><p class="name_language">Git</p></td>
+                                                    <td><p class="coding__level">Intermediate</p></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><p class="date">2024</p></td>
+                                                    <td><div class="img__github"></div></td>
+                                                    <td><p class="name_language">GitHub</p></td>
+                                                    <td><p class="coding__level">Intermediate</p></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><p class="date">2024</p></td>
+                                                    <td><div class="img__vscode"></div></td>
+                                                    <td><p class="name_language">VS CODE</p></td>
+                                                    <td><p class="coding__level">Intermediate</p></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><p class="date">2023</p></td>
+                                                    <td><div class="img__vsstudio"></div></td>
+                                                    <td><p class="name_language">Visual Studio</p></td>
+                                                    <td><p class="coding__level">Intermediate</p></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><p class="date">2022</p></td>
+                                                    <td><div class="img__netbeans"></div></td>
+                                                    <td><p class="name_language">NetBeans</p></td>
+                                                    <td><p class="coding__level">Intermediate</p></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div id="methodologies_systems" class="content-div Div__skills">
+                                      <table>
+                                            <tbody>
+                                                <tr>
+                                                    <td><p class="date">2024</p></td>
+                                                    <td><div class="img__scrum"></div></td>
+                                                    <td><p class="name_language">Scrum</p></td>
+                                                    <td><p class="coding__level">Basic</p></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><p class="date">2024</p></td>
+                                                    <td><div class="img__jira"></div></td>
+                                                    <td><p class="name_language">Jira</p></td>
+                                                    <td><p class="coding__level">Basic</p></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><p class="date">2024</p></td>
+                                                    <td><div class="img__trello"></div></td>
+                                                    <td><p class="name_language">Trello</p></td>
+                                                    <td><p class="coding__level">Basic</p></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><p class="date">2004</p></td>
+                                                    <td><div class="img__windows"></div></td>
+                                                    <td><p class="name_language">Windows</p></td>
+                                                    <td><p class="coding__level">Ultra-Advance</p></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><p class="date">2025</p></td>
+                                                    <td><div class="img__linux"></div></td>
+                                                    <td><p class="name_language">Linux</p></td>
+                                                    <td><p class="coding__level">Intermediate</p></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         <section class="Section__Contact"></section>
         <footer></footer>
       </div>
     </div>
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script>
+        function showDiv(index) {
+            $('#skillsCarousel').carousel(index);
+        }
+    </script>
   </body>
 </html>
